@@ -20,4 +20,4 @@ app.post("/", (req, res) => {
     res.render("home", { value: answer });
 })
 
-app.listen(port, () => { console.log(`running on port ${port}`); })
+app.listen(process.env.PORT || port, () => { console.log(`running on port ${port}`); })
