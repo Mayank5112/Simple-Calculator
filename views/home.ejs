@@ -1,0 +1,59 @@
+<%- include("partials/header") %>
+
+    <body>
+        <div class="headcontain">
+            <form action="/" method="POST">
+                <h1 class="text-center">Calculate here !</h1>
+                <div class="container flex flex-col items-center mx-auto m-w-20">
+                    <div class="row">
+                        <input class="input" name="value" type="text" value="<%-value%>" />
+                    </div>
+                    <div class="row">
+                        <button type="button" class="button" onclick="addScreen('%')">%</button>
+                        <button type="button" class="button" onclick="clearScreen()">C</button>
+                        <button type="button" class="button" onclick="">M+</button> <!-- to add -->
+                        <button type="button" class="button" onclick="">M-</button> <!-- to add -->
+                    </div>
+                    <div class="row">
+                        <button type="button" class="button" onclick="addScreen('7')">7</button>
+                        <button type="button" class="button" onclick="addScreen('8')">8</button>
+                        <button type="button" class="button" onclick="addScreen('9')">9</button>
+                        <button type="button" class="button" onclick="addScreen('*')">*</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="button" onclick="addScreen('4')">4</button>
+                        <button type="button" class="button" onclick="addScreen('5')">5</button>
+                        <button type="button" class="button" onclick="addScreen('6')">6</button>
+                        <button type="button" class="button" onclick="addScreen('/')">/</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="button" onclick="addScreen('1')">1</button>
+                        <button type="button" class="button" onclick="addScreen('2')">2</button>
+                        <button type="button" class="button" onclick="addScreen('3')">3</button>
+                        <button type="button" class="button" onclick="addScreen('+')">+</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="button" onclick="addScreen('0')">0</button>
+                        <button type="button" class="button" onclick="addScreen('.')">.</button>
+                        <button type="submit" class="button">=</button>
+                        <button type="button" class="button" onclick="addScreen('-')">-</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="button" onclick="addScreen('(')">(</button>
+                        <button type="button" class="button" onclick="addScreen(')')">)</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </body>
+    <script>
+        function addScreen(x) {
+            document.querySelector('input').value += x;
+        }
+        function clearScreen() {
+            document.querySelector('input').value = "";
+        }
+    </script>
+
+    </html>
